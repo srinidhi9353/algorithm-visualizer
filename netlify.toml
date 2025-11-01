@@ -1,0 +1,38 @@
+# Netlify configuration for Algorithm Learning Platform
+
+[build]
+  # Build command
+  command = "npm run build"
+  
+  # Directory to publish (dist folder created by Vite)
+  publish = "dist"
+  
+  # Node version
+  environment = { NODE_VERSION = "18" }
+
+# Redirect rules for Single Page Application (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Don't cache service worker
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
