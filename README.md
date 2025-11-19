@@ -75,20 +75,12 @@ The optimized production build will be in the `dist` folder.
 
 ## 🌐 Deployment
 
-### Netlify Deployment
+This project can be deployed to any static hosting service that supports modern JavaScript applications.
 
-This project is configured for easy deployment on Netlify:
+For example, you can deploy to Vercel, GitHub Pages, or any similar service by:
 
-1. Push your code to GitHub
-2. Connect your GitHub repository to Netlify
-3. Netlify will automatically detect the build settings from `netlify.toml`
-4. Your site will be deployed automatically on every push to main branch
-
-Alternatively, you can use the Netlify CLI:
-```bash
-npm install -g netlify-cli
-netlify deploy --prod
-```
+1. Building the project with `npm run build`
+2. Uploading the contents of the `dist` folder to your hosting provider
 
 ## 📚 Project Structure
 
@@ -113,7 +105,6 @@ project-main/
 │   ├── utils/           # Utility functions
 │   └── App.tsx          # Main app component
 ├── public/              # Static assets
-├── netlify.toml         # Netlify configuration
 └── package.json         # Dependencies and scripts
 ```
 

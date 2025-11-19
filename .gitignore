@@ -38,8 +38,6 @@ build
 Thumbs.db
 .DS_Store
 
-# Netlify
-.netlify
 
 # Testing
 coverage
