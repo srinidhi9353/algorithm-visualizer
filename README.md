@@ -24,7 +24,7 @@ An interactive educational platform for learning computer science algorithms and
 - **Icons**: Lucide React, Heroicons
 - **AI**: DeepSeek API for enhanced question answering
 
-## 📦 Installation.
+## 📦 Installation
 
 1. Clone the repository:
 ```bash
